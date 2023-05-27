@@ -1,7 +1,11 @@
 package ru.progwrads.java2.lessons.recursion;
 
-import java.time.*;
-import java.util.*;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -54,7 +58,7 @@ public class GoodsWithLambda {
 		
 		List<Goods> list = goods.stream().sorted(Comparator.comparingLong(x -> x.expired.getEpochSecond()))
 						.dropWhile(x -> x.expired.isBefore(date)).collect(Collectors.toList());
-		
+						
 		printGoods("expiredAfter:", list);
 		return list;
 	}
@@ -63,6 +67,7 @@ public class GoodsWithLambda {
 		
 		List<Goods> list = goods.stream().sorted(Comparator.comparingInt(x -> x.available))
 						.takeWhile(x -> x.available < count).collect(Collectors.toList());
+		
 		printGoods("countLess:", list);
 		return list;
 	}
