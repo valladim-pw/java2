@@ -63,7 +63,6 @@ public class GoodsWithLambda {
 		
 		List<Goods> list = goods.stream().sorted(Comparator.comparingInt(x -> x.available))
 						.takeWhile(x -> x.available < count).collect(Collectors.toList());
-		
 		printGoods("countLess:", list);
 		return list;
 	}
