@@ -2,7 +2,6 @@ package ru.progwrads.java2.lessons.recursion;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.Objects;
 
 public class Goods {
 	String name;
@@ -10,6 +9,9 @@ public class Goods {
 	int available;
 	double price;
 	Instant expired;
+	
+	public Goods(){}
+	
 	public Goods(String name, String number, int available, double price, String time) {
 		this.name = name;
 		this.number = number;
