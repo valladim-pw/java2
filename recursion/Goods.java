@@ -16,6 +16,7 @@ public class Goods {
 	public Goods(){}
 	
 	public Goods(String name, String number, int available, double price, String time) {
+		
 		this.name = name;
 		this.number = number;
 		this.available = available;
