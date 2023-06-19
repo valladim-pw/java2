@@ -15,6 +15,7 @@ public class GoodsWithLambda {
 	public GoodsWithLambda(){}
 	
 	public void setGoods(List<Goods> list) {
+		
 		goods = list.stream().collect(Collectors.toList());
 		printGoods("setGoods:", goods);
 	}
